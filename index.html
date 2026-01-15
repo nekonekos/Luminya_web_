@@ -16,6 +16,19 @@
   <meta name="theme-color" content="#1C1C1F">
   <link rel="stylesheet" href="https://cdn3.codesign.qq.com/icons/X2bzpZvRWkZkAaV/latest/iconfont.css">
   <script src="/jquery-3.7.1.min.js"></script>
+  <style>
+    /* 添加SVG图标样式 */
+    .social-svg-icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+      transition: fill 0.3s ease;
+    }
+    
+    .about-button.social-button:hover .social-svg-icon {
+      fill: #ffffff;
+    }
+  </style>
 </head>
 
 <body id="body">
@@ -54,10 +67,6 @@
     <a href="javascript:heoWeb.scrollTo('项目');" class="nav-item">项目</a>
     <a href="javascript:heoWeb.scrollTo('更多');" class="nav-item">更多</a>
   </div>
-  <!-- <div class="nav-banner">
-    <a class="nav-banner-text" href="/" target="_blank">LumiNya 新版网站已上线<span
-        class="heofont icon-arrow-right-s-line" style="font-size: 16px;"></span></a>
-  </div> -->
 
   <div class="first-stack need-padding">
     <div class="left-Introduce">
@@ -70,11 +79,18 @@
       </div>
       <div class="first-stack-links">
         <a href="/" class="about-button" target="_blank">了解更多</a>
-        <a href="/" class="about-button social-button" target="_blank">
-          <i class="heofont icon-github-line"></i>
+        <a href="https://github.com" class="about-button social-button" target="_blank" title="GitHub">
+          <svg class="social-svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+          </svg>
         </a>
-        <a href="/" class="about-button social-button" target="_blank">
-          <i class="heofont icon-dribbble-line"></i>
+        <a href="javascript:void(0);" class="about-button social-button" id="copy-qq-btn" title="复制QQ号">
+          <svg class="social-svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8.88 9.94a.31.31 0 01-.2-.07c-.15-.12-.17-.33-.05-.48.56-.71 1.42-1.13 2.38-1.13 1.34 0 2.42 1.08 2.42 2.42 0 .96-.51 1.79-1.27 2.25-.12.07-.27.04-.35-.08a.26.26 0 01.08-.36c.65-.39 1.09-1.08 1.09-1.81 0-1.05-.85-1.9-1.9-1.9-.77 0-1.46.47-1.77 1.2-.04.12-.16.19-.28.19z"></path>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18.75c-4.83 0-8.75-3.93-8.75-8.75S7.17 3.25 12 3.25 20.75 7.17 20.75 12 16.83 20.75 12 20.75z"></path>
+            <path d="M15.17 9.87c-.12 0-.24-.05-.32-.15-.12-.15-.1-.36.05-.48.29-.23.48-.58.48-.98 0-.69-.56-1.25-1.25-1.25s-1.25.56-1.25 1.25c0 .4.19.75.48.98.15.12.17.33.05.48a.34.34 0 01-.48.05 1.75 1.75 0 01-.55-1.28c0-.97.78-1.75 1.75-1.75s1.75.78 1.75 1.75c0 .49-.2.95-.55 1.28-.08.07-.18.1-.27.1z"></path>
+            <path d="M12 18.25c-2.48 0-4.5-2.02-4.5-4.5s2.02-4.5 4.5-4.5 4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm0-8.5c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path>
+          </svg>
         </a>
       </div>
       
@@ -83,6 +99,9 @@
       <img class="banner-img" src="/img/封面2.webp" alt="banner" title="banner">
     </a>
   </div>
+
+  <!-- 添加隐藏的QQ号输入框用于复制 -->
+  <input type="text" id="qq-number" value="123456789" style="position: absolute; left: -9999px; opacity: 0;">
 
   <div class="avatar-discription">
     <span class="avatar-discription-text">"你好~ 这里是 LumiNya，一个普通的初中生，爱好有很多，写代码、听音乐、玩游戏… 很高兴能在这里与你相遇，我喜欢和善良的人交朋友。我曾经的网名叫做'OceanInDreams'，后来，我退出MTF圈之后重新给自己找了个名字:LumiNya。你也可以叫我卢米娜/小娜。我曾经是一名信竟生，因学业问题退役，现在会在课余时间折腾一些东西，比如网站什么的。我还是一枚域名爱好者，喜欢注册/收藏各种域名。"</span>
@@ -706,5 +725,40 @@
 
 <script src="/js/simpleParallax.min.js"></script>
 <script src="/js/main.js"></script>
+
+<script>
+// 复制QQ号功能
+document.addEventListener('DOMContentLoaded', function() {
+  const copyQqBtn = document.getElementById('copy-qq-btn');
+  const qqNumberInput = document.getElementById('qq-number');
+  
+  if (copyQqBtn && qqNumberInput) {
+    copyQqBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // 选中QQ号输入框中的文本
+      qqNumberInput.select();
+      qqNumberInput.setSelectionRange(0, 99999); // 对于移动设备
+      
+      try {
+        // 执行复制命令
+        const successful = document.execCommand('copy');
+        
+        if (successful) {
+          alert('QQ号 123456789 已成功复制到剪贴板！');
+        } else {
+          alert('复制失败，请手动复制QQ号：123456789');
+        }
+      } catch (err) {
+        console.error('复制失败:', err);
+        alert('复制失败，请手动复制QQ号：123456789');
+      }
+      
+      // 取消选中状态
+      window.getSelection().removeAllRanges();
+    });
+  }
+});
+</script>
 
 </html>
